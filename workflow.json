@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "mode": "csv",
+        "options": {
+          "header": true,
+          "delimiter": ",",
+          "skipEmptyLines": true
+        },
+        "file": {
+          "mode": "path",
+          "path": "mock_data/products.csv"
+        }
+      },
+      "name": "Read Mock Stock Data",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const lowStockItems = items[0].json.filter(item => item.stock <= item.threshold);\n\nif (lowStockItems.length > 0) {\n  return [{json: lowStockItems}];\n} else {\n  return [];\n}"
+      },
+      "name": "Check for Low Stock",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "text": "Low Stock Alert: {{ $json.length }} item(s) are below threshold.\n\n{{ $json.map(item => `- ${item.name}: Stock ${item.stock}, Threshold ${item.threshold}`).join('\\n') }}",
+        "channel": "#stock-alerts",
+        "options": {
+          "username": "Huel Stock Bot"
+        }
+      },
+      "name": "Send Slack Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        720,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Read Mock Stock Data": [
+      [
+        {
+          "node": "Check for Low Stock",
+          "index": 0
+        }
+      ]
+    ],
+    "Check for Low Stock": [
+      [
+        {
+          "node": "Send Slack Alert",
+          "index": 0
+        }
+      ]
+    ]
+  },
+  "id": "huel-stock-alert-automation-workflow",
+  "name": "Huel Stock Alert Automation",
+  "active": false,
+  "settings": {
+    "saveDataSuccess": true
+  },
+  "versionId": "1.0"
+}
