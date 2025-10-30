@@ -41,4 +41,4 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
 - **Cost-effective**: Open-source and cloud-friendly.
 
 ---
-**Built by A. Developer | linkedin.com/in/adeveloper | <developer@example.com>**
+**Built by Tania Rosa | linkedin.com/in/tania-rosa-99503b36 | <trsdeveloper@proton.me>**
