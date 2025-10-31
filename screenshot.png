@@ -1,4 +1,0 @@
-[Placeholder for n8n Workflow Screenshot]
-
-A simple diagram representing the workflow:
-Read Mock Stock Data (CSV) -> Check for Low Stock (Function) -> Send Slack Alert (Slack)

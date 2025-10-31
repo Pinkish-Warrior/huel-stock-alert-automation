@@ -16,7 +16,7 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
 2. **Checks for low stock** (using a Function node).
 3. **Sends alerts** (email/Slack) with actionable details.
 
-![Workflow Screenshot](screenshot.png)
+![Workflow Screenshot](screenshot_huel.png)
 
 ## 🚀 Try It Yourself
 
