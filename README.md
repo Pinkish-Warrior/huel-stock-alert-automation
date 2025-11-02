@@ -42,11 +42,6 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
 
 ---
 **Built by Tania Rosa | linkedin.com/in/tania-rosa-99503b36 | <trsdeveloper@proton.me>**
-```text
-   ┌────────────────────────┐
-   │   AI-GENERATED ✅      │
-   │   HUMAN-VERIFIED 🧠    │
-   └────────────────────────┘
-```
+
 ![AI Generated - Human Verified](https://img.shields.io/badge/AI%20generated-Human%20verified-success)
 
