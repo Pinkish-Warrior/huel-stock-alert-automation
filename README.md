@@ -28,7 +28,7 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
 3. **Run it**!
    - The workflow will log low-stock items and send a test alert.
 
-## 🔧 Customizations for Huel
+## 🔧 Customisations for Huel
 
 - **Connect to Shopify/ERP**: Replace the HTTP Request node with Huel’s actual inventory API.
 - **Add supplier integration**: Auto-generate purchase orders when stock is low.
@@ -49,5 +49,5 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
    └────────────────────────┘
 ```
 ![AI Generated - Human Verified]
-(https://img.shields.io/badge/AI%20gerenated-Human%verified-007EC6)
+(https://img.shields.io/badge/AI%20gerenated-Human%20verified-007EC6)
 
