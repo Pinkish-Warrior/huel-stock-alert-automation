@@ -48,4 +48,6 @@ Huel’s operations likely involve tracking inventory for powders, bars, and rea
    │   HUMAN-VERIFIED 🧠    │
    └────────────────────────┘
 ```
+![AI generated - Human Verified]
+(http://img.shields.io/badge/AI%20verified-007EC6)
 
